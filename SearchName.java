@@ -27,19 +27,26 @@ public class SearchName {
 
         search(names, searchedName);
     }
-
+    
     public static void search(String[]names, String key){
         boolean flag = false;
 
+        int counter = 0;
         for(String name : names){
             if (name.equalsIgnoreCase(key)) {
-                System.out.println("FOUNDED!");
+                //System.out.println("FOUNDED!");
                 flag = true;
+                // break; 
+                counter++;
+
             }
         }
 
         if (!flag) {
             System.out.println("NOT FOUNDED!");
+        }
+        else{
+            System.out.println("FOUNDED ( " + counter + " )");
         }
     }
 }
